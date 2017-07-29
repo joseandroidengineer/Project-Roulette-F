@@ -81,13 +81,15 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager(ViewPager viewPager) {
         Bundle bundle = new Bundle();
         bundle.putParcelable("address",getIntent().getParcelableExtra("latlonAddress"));
+
         CardContentFragment cardContentFragment = new CardContentFragment();
         MapsFragment mapsFragment = new MapsFragment();
         mapsFragment.setArguments(bundle);
         cardContentFragment.setArguments(bundle);
+
         Adapter adapter = new Adapter(getSupportFragmentManager());
-        adapter.addFragment(new CardContentFragment(), "Card");
-        adapter.addFragment(new MapsFragment(),"Map");
+        adapter.addFragment(cardContentFragment, "Card");
+        adapter.addFragment(mapsFragment,"Map");
         viewPager.setAdapter(adapter);
     }
 

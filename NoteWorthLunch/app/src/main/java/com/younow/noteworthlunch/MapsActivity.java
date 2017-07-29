@@ -49,8 +49,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         LatLng specifiedLocation = new LatLng(address.getLatitude(), address.getLongitude());
         Circle circle = mMap.addCircle
                 (new CircleOptions().center(specifiedLocation).radius(500).strokeColor(Color.BLUE).
-                        fillColor(Color.argb(
-                        50, //This is your alpha.  Adjust this to make it more or less translucent
+                        fillColor(Color.argb(50, //This is your alpha.  Adjust this to make it more or less translucent
                         Color.red(Color.BLUE), //Red component.
                         Color.green(Color.BLUE),  //Green component.
                         Color.blue(Color.BLUE))));
