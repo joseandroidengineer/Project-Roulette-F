@@ -2,15 +2,12 @@ package com.younow.noteworthlunch;
 
 import android.content.Context;
 import android.os.Bundle;
-import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -29,20 +26,13 @@ public class CardContentFragment extends Fragment {
                 R.layout.fragment_main, container, false);
         //CardPresenter cardPresenter = new CardPresenter(getActivity().getCacheDir());
         //cardPresenter.init();
-        ListItemObject listItemObjectA = new ListItemObject("A","Address");
-        ListItemObject listItemObjectB = new ListItemObject("B","Address");
-        ListItemObject listItemObjectC = new ListItemObject("C","Address");
-        ListItemObject listItemObjectD = new ListItemObject("D","Address");
-        ListItemObject listItemObjectE = new ListItemObject("E","Address");
-        ListItemObject listItemObjectF = new ListItemObject("F","Address");
+        ListItemObject listItemObjectA = new ListItemObject("A","Address","1",1,"Another",9);
+
 
         ArrayList<ListItemObject> listItemObjects = new ArrayList<>();
 
         listItemObjects.add(listItemObjectA);
-        listItemObjects.add(listItemObjectB);
-        listItemObjects.add(listItemObjectC);
-        listItemObjects.add(listItemObjectD);
-        listItemObjects.add(listItemObjectE);
+
 
         ContentAdapter adapter = new ContentAdapter(listItemObjects, getContext());
         recyclerView.setAdapter(adapter);
@@ -61,8 +51,6 @@ public class CardContentFragment extends Fragment {
 
             //CardPresenter cardPresenter = new CardPresenter(itemView.getContext().getCacheDir());
             //cardPresenter.init();
-
-
 
             name = (TextView) itemView.findViewById(R.id.textview);
 
@@ -95,8 +83,7 @@ public class CardContentFragment extends Fragment {
 
         @Override
         public void onBindViewHolder(ViewHolder holder, int position) {
-            holder.name.setText(listItemObjects.get(position).getTitle());
-            //holder.description.setText(listItemObjects.get(1).getAddress());
+            holder.name.setText(listItemObjects.get(position).getName());
         }
 
         @Override

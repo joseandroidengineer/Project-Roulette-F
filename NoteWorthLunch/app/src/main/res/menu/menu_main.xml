@@ -19,7 +19,7 @@
     tools:context=".MainActivity">
     <item
         android:id="@+id/action_settings"
-        android:title="Settings"
+        android:name="Settings"
         android:orderInCategory="100"
         app:showAsAction="never" />
 </menu>

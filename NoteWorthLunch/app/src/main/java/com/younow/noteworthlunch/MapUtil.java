@@ -6,6 +6,8 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.widget.Toast;
 
+import com.google.android.gms.maps.model.LatLng;
+
 import java.io.IOException;
 import java.util.List;
 
@@ -36,5 +38,21 @@ public class MapUtil {
 
         }
         return address;
+    }
+
+    public static LatLng getLatLongFrom(Context context, String strAddress){
+        final Geocoder geocoder = new Geocoder(context);
+        LatLng latLng = new LatLng(0,0);
+        Address address;
+
+        try{
+            List<Address> addresses = geocoder.getFromLocationName(strAddress, 1);
+            address = addresses.get(0);
+            latLng = new LatLng(address.getLatitude(),address.getLongitude());
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return latLng;
+
     }
 }
