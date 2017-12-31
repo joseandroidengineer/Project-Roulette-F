@@ -2,7 +2,6 @@ package com.younow.noteworthlunch;
 
 import android.Manifest;
 import android.annotation.TargetApi;
-import android.app.Activity;
 import android.content.pm.PackageManager;
 import android.graphics.Color;
 import android.location.Address;
@@ -13,7 +12,6 @@ import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.FragmentActivity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -32,14 +30,13 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 
 import java.util.ArrayList;
-import java.util.Locale;
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback, GoogleApiClient.OnConnectionFailedListener, GoogleApiClient.ConnectionCallbacks {
 
     private GoogleMap mMap;
     private Address address;
     private GoogleApiClient mGoogleApiClient;
-    private static int RESQUEST_LOCATION = 0;
+    private static int REQUEST_LOCATION = 0;
 
 
     @Override
@@ -134,7 +131,7 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
                 // No explanation needed, we can request the permission.
 
-                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, RESQUEST_LOCATION);
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_CONTACTS}, REQUEST_LOCATION);
 
                 // MY_PERMISSIONS_REQUEST_READ_CONTACTS is an
                 // app-defined int constant. The callback method gets the
