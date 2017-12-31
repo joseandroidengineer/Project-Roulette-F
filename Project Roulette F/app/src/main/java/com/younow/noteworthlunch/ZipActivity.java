@@ -82,7 +82,7 @@ public class ZipActivity extends AppCompatActivity {
         if (requestCode == PLACE_PICKER_REQUEST) {
             if (resultCode == RESULT_OK) {
                 Bundle bundle = new Bundle();
-                Place place = PlacePicker.getPlace(data, this);
+                Place place = PlacePicker.getPlace(this, data);
 
                 String toastMsg = String.format("Place: %s", place.getName());
                 bundle.putString("placeName", String.format("%s",place.getName()));
@@ -95,6 +95,7 @@ public class ZipActivity extends AppCompatActivity {
                 Intent intent = new Intent(activity, PlacesDetail.class);
                 intent.putExtra("places", (Parcelable) place);
                 intent.putExtra("placeName", String.format("%s",place.getName()));
+                intent.putExtra("bundle", bundle);
                 startActivity(intent);
                 Toast.makeText(this, toastMsg, Toast.LENGTH_LONG).show();
             }
