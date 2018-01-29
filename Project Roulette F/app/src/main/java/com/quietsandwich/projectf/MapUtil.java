@@ -1,9 +1,8 @@
-package com.younow.noteworthlunch;
+package com.quietsandwich.projectf;
 
 import android.content.Context;
 import android.location.Address;
 import android.location.Geocoder;
-import android.os.Bundle;
 import android.widget.Toast;
 
 import com.google.android.gms.maps.model.LatLng;

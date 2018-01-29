@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.younow.noteworthlunch">
+    package="com.quietsandwich.projectf">
 
     <!--
          The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
@@ -16,7 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ZipActivity">
+        <activity android:name="com.quietsandwich.projectf.ZipActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -36,11 +36,11 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name=".MapsActivity"
+            android:name="com.quietsandwich.projectf.MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name=".MainActivity" />
+        <activity android:name="com.quietsandwich.projectf.MainActivity" />
         <activity
-            android:name=".PlacesDetail"
+            android:name="com.quietsandwich.projectf.PlacesDetail"
             android:label="@string/title_activity_places_detail"
             android:theme="@style/AppTheme"></activity>
     </application>

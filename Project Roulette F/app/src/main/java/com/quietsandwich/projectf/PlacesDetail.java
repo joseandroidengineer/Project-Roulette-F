@@ -1,4 +1,4 @@
-package com.younow.noteworthlunch;
+package com.quietsandwich.projectf;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;

@@ -1,4 +1,4 @@
-package com.younow.noteworthlunch;
+package com.quietsandwich.projectf;
 
 import android.graphics.Color;
 import android.location.Address;

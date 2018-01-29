@@ -1,4 +1,4 @@
-package com.younow.noteworthlunch;
+package com.quietsandwich.projectf;
 
 import android.Manifest;
 import android.annotation.TargetApi;
