@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.Toast;
 
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
@@ -29,7 +30,7 @@ public class ZipActivity extends AppCompatActivity {
         setContentView(R.layout.activity_zip);
 
         Button button = (Button) findViewById(R.id.buttonMaps);
-        Button buttonPlaces = (Button) findViewById(R.id.button_places);
+        ImageButton buttonPlaces = (ImageButton) findViewById(R.id.image_button_places);
         Button buttonOtherMap = (Button) findViewById(R.id.button2);
         editText = (EditText) findViewById(R.id.editText);
         button.setOnClickListener(new View.OnClickListener() {
