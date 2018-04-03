@@ -16,12 +16,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name="com.quietsandwich.projectf.ZipActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".ZipActivity">
         </activity>
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -36,13 +31,20 @@
             android:value="@string/google_maps_key" />
 
         <activity
-            android:name="com.quietsandwich.projectf.MapsActivity"
+            android:name=".MapsActivity"
             android:label="@string/title_activity_maps" />
-        <activity android:name="com.quietsandwich.projectf.MainActivity" />
+        <activity android:name=".MainActivity" />
         <activity
-            android:name="com.quietsandwich.projectf.PlacesDetail"
+            android:name=".PlacesDetail"
             android:label="@string/title_activity_places_detail"
-            android:theme="@style/AppTheme"></activity>
+            android:theme="@style/AppTheme" />
+        <activity android:name=".Login">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
     </application>
 
 </manifest>
